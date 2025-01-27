@@ -23,12 +23,6 @@ lr_test_mse = mean_squared_error(y_test,y_test_pred)
 lr_test_r2 = r2_score(y_test,y_test_pred)
 
 
-
-# print("LR train MSE", lr_train_mse)
-# print("LR train r2", lr_train_mse)
-# print("LR test MSE", lr_test_mse)
-# print("LR test MSE", lr_test_r2)
-
 lr_results=pd.DataFrame(["Linear Regression Results",lr_train_mse,lr_train_mse,lr_test_mse,lr_test_r2]).transpose()
 lr_results.columns = ["Model","Training MSE","Training r2","Testing MSE","Testing r2"]
 lr_results.to_csv("linear_regression_results.csv", index=False)
